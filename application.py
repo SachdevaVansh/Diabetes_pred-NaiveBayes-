@@ -7,6 +7,10 @@ import pandas as pd
 application = Flask(__name__)
 app=application
 
+scaler=pickle.load(open('Model/standardScaler.pkl','rb'))
+model=pickle.load(open('Model/modelforPrediction.pkl','rb'))
+
+
 ## Route for homepage
 
 @app.route("/")
